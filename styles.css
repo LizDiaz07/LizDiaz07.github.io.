@@ -1,0 +1,122 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #e9dce2;
+}
+
+main {
+    width: 60%;
+    background-color: #D9BACB;
+    padding: 50px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+}
+
+#user-list {
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.user-card {
+font-size: 16px;
+font-weight: bold;
+    color: #333;
+    margin: 5px 0;
+
+    background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 20px;
+        margin: 15px;
+        width: 180px;
+        text-align: center;
+        border-radius: 12px;
+        /* Bordes redondeados */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        /* Sombra sutil */
+        transition: box-shadow 0.3s ease, transform 0.3s ease;
+        /* Transición para el hover */
+    }
+
+
+.user-card:hover {
+    background-color: #f2b2df;
+    /* Cambia a un azul más oscuro al hacer hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        /* Aumenta la sombra */
+    transform: translateY(-5px);
+        /* Eleva ligeramente la tarjeta */
+    opacity: 0;
+        transform: translateY(20px);
+        /* Comienza un poco más abajo */
+        animation: fadeInUp 0.9s forwards;
+}
+
+#pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    background: linear-gradient(135deg, #db34a3, #b9299a);
+        /* Gradiente diagonal */
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+}
+
+button:disabled {
+    opacity: 0.5;
+    background-color: #bdc3c7;
+        /* Color gris */
+        cursor: not-allowed;
+        /* Indicador de que no es clicable */
+        opacity: 0.6;
+        /* Transparencia para dar efecto de estar desactivado */
+}
+
+.spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #b434db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        border-top-color: #492559;
+    }
+
+    50% {
+        border-top-color: #bf04b6;
+        /* Cambia a rojo a mitad de la animación C:*/
+    }
+
+    100% {
+        transform: rotate(360deg);
+        border-top-color: #592555;
+    }
+}
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
